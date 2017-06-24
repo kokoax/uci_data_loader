@@ -7,11 +7,11 @@ defmodule UciDataLoader.Mixfile do
      elixir: "~> 1.4",
      description: "Load data from UCI repository",
      package: [
-       maintainers: ["kokoax"]
+       maintainers: ["kokoax"],
        licenses: ["MIT"],
        links: %{
-         "UCIDataLoader" => "https://github.com/kokoax/uci_data_loader"
-         "HTTPoison" => "https://github.com/edgurgel/httpoison"
+         "UCIDataLoader" => "https://github.com/kokoax/uci_data_loader",
+         "HTTPoison" => "https://github.com/edgurgel/httpoison",
        }
      ],
      build_embedded: Mix.env == :prod,
