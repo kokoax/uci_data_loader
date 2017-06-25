@@ -1,5 +1,8 @@
 # UciDataLoader
 
+[![hex.pm version](https://img.shields.io/hexpm/v/ltsv.svg)](https://hex.pm/packages/ltsv)
+[![hex.pm](https://img.shields.io/hexpm/l/ltsv.svg)](https://github.com/ma2gedev/ltsvex/blob/master/LICENSE)
+
 **TODO: Add description**
 
 ## Installation
