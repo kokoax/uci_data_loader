@@ -27,6 +27,7 @@ defmodule UCIDataLoader do
       target_names:    target_names,
       length:          datasets.length,
       amount:          n,
+      cluster_num:     target_names |> Enum.count,
       each_amount:     Util.get_each_amount(target_names,target_all_name),
     }
   end

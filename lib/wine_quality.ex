@@ -13,7 +13,7 @@ defmodule WineQuality do
       target_all_name: target_all_name,
       target_names:    target_names,
       length:          11,
-      amount:          1600,
+      amount:          1599,
       cluster_num:     target_names |> Enum.count,
       each_amount:     Util.get_each_amount(target_names,target_all_name),
     }
