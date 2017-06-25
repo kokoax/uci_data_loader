@@ -26,6 +26,7 @@ defmodule UciDataLoader.Mixfile do
 
   defp deps do
     [
+		{:ex_doc, ">= 0.1.0", only: :dev},
       {:httpoison, "~> 0.11.1"},
     ]
   end
