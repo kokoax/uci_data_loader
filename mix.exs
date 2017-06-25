@@ -3,7 +3,7 @@ defmodule UciDataLoader.Mixfile do
 
   def project do
     [app: :uci_data_loader,
-     version: "0.1.0",
+     version: "0.1.1",
      elixir: "~> 1.4",
      description: "Load data from UCI repository",
      package: [
@@ -26,7 +26,7 @@ defmodule UciDataLoader.Mixfile do
 
   defp deps do
     [
-		{:ex_doc, ">= 0.1.0", only: :dev},
+		  {:ex_doc, ">= 0.1.0", only: :dev},
       {:httpoison, "~> 0.11.1"},
     ]
   end
