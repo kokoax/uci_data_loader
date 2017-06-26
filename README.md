@@ -3,7 +3,9 @@
 [![hex.pm version](https://img.shields.io/hexpm/v/ltsv.svg)](https://hex.pm/packages/ltsv)
 [![hex.pm](https://img.shields.io/hexpm/l/ltsv.svg)](https://github.com/ma2gedev/ltsvex/blob/master/LICENSE)
 
-**TODO: Add description**
+## Usage
+- ``iex> UCIDataLoader.load_iris``
+- ``iex> UCIDataLoader.load_wine_quality``
 
 ## Installation
 
