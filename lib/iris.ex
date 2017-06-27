@@ -4,7 +4,7 @@ defmodule Iris do
     iris_url = "http://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"
     %HTTPoison.Response{status_code: 200, body: body} = iris_url |> HTTPoison.get!
 
-    all_data        = body            |> Util.to_enum(",")
+    all_data        = body            |> Util.to_enum(",") |> Enum.filter(&(&1 != [""]))
     target_all_name = all_data        |> Util.to_target_all_name
     target_names    = target_all_name |> Enum.uniq |> Enum.filter(&(&1 != ""))
 
