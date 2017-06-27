@@ -1,7 +1,6 @@
 # UciDataLoader
 
-[![hex.pm version](https://img.shields.io/hexpm/v/ltsv.svg)](https://hex.pm/packages/ltsv)
-[![hex.pm](https://img.shields.io/hexpm/l/ltsv.svg)](https://github.com/ma2gedev/ltsvex/blob/master/LICENSE)
+[![hex.pm version](https://img.shields.io/hexpm/v/ltsv.svg)](https://hex.pm/packages/uci_data_loader)
 
 ## Usage
 - ``iex> UCIDataLoader.load_iris``
@@ -14,7 +13,7 @@ by adding `uci_data_loader` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
-  [{:uci_data_loader, "~> 0.1.0"}]
+  [{:uci_data_loader, "~> 0.1.1"}]
 end
 ```
 
