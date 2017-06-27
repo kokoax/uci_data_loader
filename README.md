@@ -1,6 +1,6 @@
 # UciDataLoader
 
-[![hex.pm version](https://img.shields.io/hexpm/v/ltsv.svg)](https://hex.pm/packages/uci_data_loader)
+[![hex.pm version](https://img.shields.io/hexpm/v/uci_data_loader.svg)](https://hex.pm/packages/uci_data_loader)
 
 ## Usage
 - ``iex> UCIDataLoader.load_iris``
