@@ -13,7 +13,7 @@ by adding `uci_data_loader` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
-  [{:uci_data_loader, "~> 0.1.1"}]
+  [{:uci_data_loader, "~> 0.1.2"}]
 end
 ```
 
