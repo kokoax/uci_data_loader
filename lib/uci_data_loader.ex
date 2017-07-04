@@ -28,17 +28,28 @@ defmodule UCIDataLoader do
   end
 
   @doc """
-  Data load from wine quality in UCI repository.
+  Data load from wine quality red in UCI repository.
 
   ### refer
   http://archive.ics.uci.edu/ml/datasets/Wine+Quality
   """
-  def load_wine_quality do
-    WineQuality.load
+  def load_wine_quality_red do
+    WineQuality.load_red
   end
 
   @doc """
-  This method do number of n Sampling with Replacement.
+  Data load from wine quality white in UCI repository.
+
+  ### refer
+  http://archive.ics.uci.edu/ml/datasets/Wine+Quality
+  """
+
+  def load_wine_quality_white do
+    WineQuality.load_white
+  end
+
+  @doc """
+  This method do n times Sampling with Replacement.
   """
   def sampling_with_replace(datasets, n) do
     rands = 1..n |> Enum.map(
