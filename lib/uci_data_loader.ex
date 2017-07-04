@@ -65,7 +65,7 @@ defmodule UCIDataLoader do
       |> Enum.map(&(datasets.target_all_name |> Enum.at(&1)))
       |> Enum.uniq
 
-    %UCIDataLoader{
+    %UCIDataLoader {
       data:            rands |> Enum.map(&(datasets.data |> Enum.at(&1))),
       target_all_name: target_all_name,
       target_names:    target_names,
