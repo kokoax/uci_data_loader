@@ -1,6 +1,5 @@
 defmodule UCIDataLoader do
   defstruct [:data, :target_all_name, :target_names, :length, :amount, :cluster_num, :each_amount]
-
   @moduledoc """
   UCI module has method that load of data from UCI repository.
   ```
@@ -16,6 +15,7 @@ defmodule UCIDataLoader do
   }
   ```
   """
+  require FirstUtil
 
   @doc """
   Data load from iris in UCI repository.
@@ -82,7 +82,7 @@ defmodule UCIDataLoader do
       length:          datasets.length,
       amount:          n,
       cluster_num:     target_names |> Enum.count,
-      each_amount:     Util.get_each_amount(target_names,target_all_name),
+      each_amount:     FirstUtil.get_each_amount(target_names,target_all_name),
     }
   end
 end
