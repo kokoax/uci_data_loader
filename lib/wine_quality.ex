@@ -5,7 +5,7 @@ defmodule WineQuality do
     %HTTPoison.Response{status_code: 200, body: body} = wine_url |> HTTPoison.get!
 
     all_data = Regex.split(~r/\R/, body) |> Enum.slice(1,4899-1) |> Enum.join("\n") |> Util.to_enum(";")
-    target_all_name = all_data |> Util.to_target_all_name
+    target_all_name = all_data |> Enum.map(&(&1 |> Enum.at(-1)))
     target_names    = target_all_name |> Enum.uniq
 
     %UCIDataLoader {
@@ -23,7 +23,7 @@ defmodule WineQuality do
     %HTTPoison.Response{status_code: 200, body: body} = wine_url |> HTTPoison.get!
 
     all_data = Regex.split(~r/\R/, body) |> Enum.slice(1,1600-1) |> Enum.join("\n") |> Util.to_enum(";")
-    target_all_name = all_data |> Util.to_target_all_name
+    target_all_name = all_data |> Enum.map(&(&1 |> Enum.at(-1)))
     target_names    = target_all_name |> Enum.uniq
 
     %UCIDataLoader {

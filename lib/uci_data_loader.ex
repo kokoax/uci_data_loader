@@ -28,6 +28,16 @@ defmodule UCIDataLoader do
   end
 
   @doc """
+  Data load from wine in UCI repository.
+
+  ### refer
+  http://archive.ics.uci.edu/ml/datasets/Wine
+  """
+  def load_wine do
+    Wine.load
+  end
+
+  @doc """
   Data load from wine quality red in UCI repository.
 
   ### refer
