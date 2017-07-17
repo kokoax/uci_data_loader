@@ -3,7 +3,7 @@ defmodule UciDataLoader.Mixfile do
 
   def project do
     [app: :uci_data_loader,
-     version: "0.1.2.1",
+     version: "0.1.3",
      elixir: "~> 1.4",
      description: "Load data from UCI repository",
      package: [
