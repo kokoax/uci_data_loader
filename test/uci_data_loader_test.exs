@@ -2,7 +2,7 @@ defmodule UciDataLoaderTest do
   use ExUnit.Case
   doctest UCIDataLoader
 
-  test "data contece nil" do
+  test "data contain nil" do
     iris               = UCIDataLoader.load_iris
     wine               = UCIDataLoader.load_wine
     wine_quality_red   = UCIDataLoader.load_wine_quality_red
