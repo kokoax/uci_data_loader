@@ -3,11 +3,11 @@ defmodule UciDataLoaderTest do
   doctest UCIDataLoader
 
   test "data contain nil" do
-    iris               = UCIDataLoader.load_iris
-    wine               = UCIDataLoader.load_wine
-    wine_quality_red   = UCIDataLoader.load_wine_quality_red
-    wine_quality_white = UCIDataLoader.load_wine_quality_white
-    abalone            = UCIDataLoader.load_abalone
+    iris               = Iris.load("datasets/iris.data")
+    wine               = Wine.load("datasets/wine.data")
+    wine_quality_red   = WineQuality.load_red("datasets/winequality-red.csv")
+    wine_quality_white = WineQuality.load_white("datasets/winequality-white.csv")
+    abalone            = Abalone.load("datasets/abalone.data")
 
     assert iris.data               |> Enum.all?(&(&1 != nil))
     assert iris.data               |> Enum.all?(&(&1 != ""))
@@ -22,7 +22,7 @@ defmodule UciDataLoaderTest do
   end
 
   test "sampling has nil? in wine_quality" do
-    wine = UCIDataLoader.load_wine_quality_red
+    wine = WineQuality.load_red("datasets/winequality-red.csv")
     1..1000 |> Enum.map(
       fn(_) ->
         sample = wine |> UCIDataLoader.sampling_with_replace(30)

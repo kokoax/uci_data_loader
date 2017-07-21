@@ -1,8 +1,9 @@
 defmodule Wine do
   require FirstUtil
-  def load() do
-    wine_url = "http://archive.ics.uci.edu/ml/machine-learning-databases/wine/wine.data"
-    %HTTPoison.Response{status_code: 200, body: body} = wine_url |> HTTPoison.get!
+
+  def load(filename \\ "deps/uci_data_loader/datasets/wine.data")
+  def load(filename) do
+    {:ok, body} = File.read(filename)
 
     all_data =
       Regex.split(~r/\R/, body |> String.replace(",.", ",0."))

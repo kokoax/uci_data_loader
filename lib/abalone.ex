@@ -1,8 +1,9 @@
 defmodule Abalone do
   require FirstUtil
-  def load() do
-    abalone_url = "http://archive.ics.uci.edu/ml/machine-learning-databases/abalone/abalone.data"
-    %HTTPoison.Response{status_code: 200, body: body} = abalone_url |> HTTPoison.get!
+
+  def load(filename \\ "deps/uci_data_loader/datasets/abalone.data")
+  def load(filename) do
+    {:ok, body} = File.read(filename)
 
     all_data        = body            |> FirstUtil.to_enum(",") |> Enum.filter(&(&1 != [""]))
     target_all_name = all_data        |> Enum.map(&(&1 |> Enum.at(0)))
