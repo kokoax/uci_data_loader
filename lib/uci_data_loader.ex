@@ -68,6 +68,13 @@ defmodule UCIDataLoader do
     Abalone.load
   end
 
+  def load_sonar do
+    Sonar.load
+  end
+
+  def load_isolet do
+  end
+
   @doc """
   This method do n times Sampling with Replacement.
   """

@@ -8,6 +8,9 @@ defmodule UciDataLoaderTest do
     wine_quality_red   = WineQuality.load_red("datasets/winequality-red.csv")
     wine_quality_white = WineQuality.load_white("datasets/winequality-white.csv")
     abalone            = Abalone.load("datasets/abalone.data")
+    sonar              = Sonar.load("datasets/sonar.all-data")
+    isolet             = ISOLET.load("datasets/isolet1+2+3+4.data")
+    isolet5            = ISOLET.load_5("datasets/isolet5.data")
 
     assert iris.data               |> Enum.all?(&(&1 != nil))
     assert iris.data               |> Enum.all?(&(&1 != ""))
@@ -19,6 +22,12 @@ defmodule UciDataLoaderTest do
     assert wine_quality_white.data |> Enum.all?(&(&1 != ""))
     assert abalone.data            |> Enum.all?(&(&1 != nil))
     assert abalone.data            |> Enum.all?(&(&1 != ""))
+    assert sonar.data              |> Enum.all?(&(&1 != nil))
+    assert sonar.data              |> Enum.all?(&(&1 != ""))
+    assert isolet.data             |> Enum.all?(&(&1 != nil))
+    assert isolet.data             |> Enum.all?(&(&1 != ""))
+    assert isolet5.data            |> Enum.all?(&(&1 != nil))
+    assert isolet5.data            |> Enum.all?(&(&1 != ""))
   end
 
   test "sampling has nil? in wine_quality" do
