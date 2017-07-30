@@ -3,7 +3,7 @@ defmodule ISOLET do
   def load(filename \\ "deps/uci_data_loader/datasets/isolet1+2+3+4.data")
   def load(filename) do
     {:ok, body} = File.read(filename)
-    all_data        = body            |> LastUtil.to_enum(",") |> Enum.filter(&(&1 != [""]))
+    all_data        = body            |> LastUtil.to_enum(", ") |> Enum.filter(&(&1 != [""]))
     target_all_name = all_data        |> Enum.map(&(&1 |> Enum.at(-1)))
     target_names    = target_all_name |> Enum.uniq |> Enum.filter(&(&1 != ""))
 
@@ -22,7 +22,7 @@ defmodule ISOLET do
   def load_5(filename) do
     {:ok, body} = File.read(filename)
 
-    all_data        = body            |> LastUtil.to_enum(",") |> Enum.filter(&(&1 != [""]))
+    all_data        = body            |> LastUtil.to_enum(", ") |> Enum.filter(&(&1 != [""]))
     target_all_name = all_data        |> Enum.map(&(&1 |> Enum.at(-1)))
     target_names    = target_all_name |> Enum.uniq |> Enum.filter(&(&1 != ""))
 

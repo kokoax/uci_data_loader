@@ -73,6 +73,7 @@ defmodule UCIDataLoader do
   end
 
   def load_isolet do
+    ISOLET.load
   end
 
   @doc """
