@@ -9,9 +9,9 @@ defmodule UciDataLoader.Mixfile do
      package: [
        maintainers: ["kokoax"],
        licenses: ["MIT"],
-       files: ["datasets", "lib"]
        links: %{
          "UCIDataLoader" => "https://github.com/kokoax/uci_data_loader",
+         "HTTPoison" => "https://github.com/edgurgel/httpoison",
        }
      ],
      build_embedded: Mix.env == :prod,
@@ -25,7 +25,8 @@ defmodule UciDataLoader.Mixfile do
 
   defp deps do
     [
-		  {:ex_doc, ">= 0.1.0", only: :dev},
+      {:ex_doc, ">= 0.1.0", only: :dev},
+      {:httpoison, "~> 0.11.1"},
     ]
   end
 end

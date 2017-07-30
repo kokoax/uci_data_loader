@@ -1,18 +1,18 @@
 defmodule WineQuality do
   require LastUtil
 
-  def load_white(filename \\ "deps/uci_data_loader/datasets/winequality-white.csv")
-  def load_white(filename) do
-    load(filename, 4899)
+  def load_white() do
+    url = "http://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-white.csv"
+    load(url, 4899)
   end
 
-  def load_red(filename \\ "deps/uci_data_loader/datasets/winequality-red.csv")
-  def load_red(filename) do
-    load(filename, 1600)
+  def load_red() do
+    url = "http://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv"
+    load(url, 1600)
   end
 
-  def load(filename, amount) do
-    {:ok, body} = File.read(filename)
+  def load(url, amount) do
+    %HTTPoison.Response{status_code: 200, body: body} = url |> HTTPoison.get!
 
     all_data = Regex.split(~r/\R/, body) |> Enum.slice(1,amount-1) |> Enum.join("\n") |> LastUtil.to_enum(";")
     target_all_name = all_data |> Enum.map(&(&1 |> Enum.at(-1)))

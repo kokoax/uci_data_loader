@@ -68,13 +68,23 @@ defmodule UCIDataLoader do
     Abalone.load
   end
 
+  @doc """
+  Data load from abalone in UCI repository.
+
+  ### refer
+  https://archive.ics.uci.edu/ml/machine-learning-databases/undocumented/connectionist-bench/sonar
+  """
   def load_sonar do
     Sonar.load
   end
 
-  def load_isolet do
-    ISOLET.load
-  end
+  # def load_isolet do
+  #   ISOLET.load
+  # end
+
+  # def load_isolet5 do
+  #   ISOLET.load_5
+  # end
 
   @doc """
   This method do n times Sampling with Replacement.
