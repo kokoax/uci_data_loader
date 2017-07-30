@@ -3,15 +3,15 @@ defmodule UciDataLoader.Mixfile do
 
   def project do
     [app: :uci_data_loader,
-     version: "0.1.5",
+     version: "0.1.6",
      elixir: "~> 1.5",
      description: "Load data from UCI repository",
      package: [
        maintainers: ["kokoax"],
        licenses: ["MIT"],
+       files: ["datasets", "lib"]
        links: %{
          "UCIDataLoader" => "https://github.com/kokoax/uci_data_loader",
-         "HTTPoison" => "https://github.com/edgurgel/httpoison",
        }
      ],
      build_embedded: Mix.env == :prod,
@@ -20,14 +20,12 @@ defmodule UciDataLoader.Mixfile do
   end
 
   def application do
-    # Specify extra applications you'll use from Erlang/Elixir
     [extra_applications: [:logger]]
   end
 
   defp deps do
     [
 		  {:ex_doc, ">= 0.1.0", only: :dev},
-      {:httpoison, "~> 0.11.1"},
     ]
   end
 end
