@@ -2,6 +2,9 @@
 
 [![hex.pm version](https://img.shields.io/hexpm/v/uci_data_loader.svg)](https://hex.pm/packages/uci_data_loader)
 
+# Attention!
+This repository load data with HTTP communication! So, Do not load data in a short time!
+
 ## Usage
 - ``iex> UCIDataLoader.load_iris``
 - ``iex> UCIDataLoader.load_wine_quality``
